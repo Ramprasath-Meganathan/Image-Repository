@@ -1,0 +1,21 @@
+h1 {
+    font-family: verdana;
+    font-size: 300%;
+    color:purple;
+  }
+
+label{
+  font-family: verdana;
+  font-weight: italic;
+  font-size:100%
+}
+
+.container {
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Image Repository</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <h1>Image Repository</h1>
+    <div class="container">
+    <form method="POST" action="" enctype="multipart/form-data">
+      <table>
+      <tr> 
+      <td colspan="2">
+      <p><input type="file" name="file" multiple accept="image/*"></p>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Privacy Setting</label>
+        <select name="privacy" id="privacy">
+          <option value="private">private</option>
+          <option value="public">public</option>
+    </td>
+    </tr>
+  <tr>
+    <td>
+      <p><input type="submit" value="Submit"></p>
+    </td>
+    </tr>
+    </table>
+    </form>
+    <hr>
+    <h4>Your Images</h4>
+    {% for file in privatefiles %}
+      <img src="{{ url_for('private_upload', filename=file) }}" style="width: 64px">
+    {% endfor %}
+    <br/>
+    <h4>Public Images</h4>
+    {% for file in files %}
+    <img src="{{ url_for('upload', filename=file) }}" style="width: 64px">
+  {% endfor %}
+  <br/>
+  </body>
+</div>
+</html>
+
