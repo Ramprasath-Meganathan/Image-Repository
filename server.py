@@ -67,7 +67,3 @@ def private_upload(filename):
 if __name__ == '__main__':
     app.run()
 
-#https://towardsdatascience.com/writing-a-multi-file-upload-python-web-app-with-user-authentication-8f75064b819a
-
-	#https://blog.miguelgrinberg.com/post/handling-file-uploads-with-flask
- #RamprasathMeganathan.pythonanywhere.com.
